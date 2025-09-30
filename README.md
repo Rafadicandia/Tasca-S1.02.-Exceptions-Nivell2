@@ -51,13 +51,9 @@ public static boolean llegirSiNo(String missatge), si l’usuari/ària introduei
 
 - Clonar el Repositorio:
 
-git clone DIRECCION DEL REPO
+git clone https://github.com/Rafadicandia/Tasca-S1.02.-Exceptions-Nivell2.git
 
-- Navegar al Directorio del Proyecto:
-
-Ejemplo: cd nom-del-repositorio
-
-- Configuración del IDE (Opcional pero útil):
+- Configuración del IDE:
 
 Abrir el fichero como un proyecto de Java.
 
