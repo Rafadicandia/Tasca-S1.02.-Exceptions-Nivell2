@@ -6,88 +6,92 @@ public class Entry {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static byte leerByte(String mensaje){
-        boolean error=false;
-        byte byteUsuario =0;
+    public static byte leerByte(String mensaje) {
+        boolean error = false;
+        byte byteUsuario = 0;
 
-        while(!error){
+        while (!error) {
             System.out.println(mensaje);
-            try{
+            try {
                 byteUsuario = sc.nextByte();
-                error=true;
-                System.out.println("Has introducido: "+byteUsuario);
+                error = true;
+                System.out.println("Has introducido: " + byteUsuario);
 
             } catch (InputMismatchException e) {
                 System.out.println("Error de formato");
                 sc.nextLine();
             }
-        }return byteUsuario;
+        }
+        return byteUsuario;
 
 
     }
 
-    public static int leerInt(String mensaje){
-        boolean error=false;
-        int intUsuario =0;
+    public static int leerInt(String mensaje) {
+        boolean error = false;
+        int intUsuario = 0;
 
-        while(!error){
+        while (!error) {
             System.out.println(mensaje);
-            try{
+            try {
                 intUsuario = sc.nextInt();
-                error=true;
-                System.out.println("Has introducido: "+intUsuario);
+                error = true;
+                System.out.println("Has introducido: " + intUsuario);
 
             } catch (InputMismatchException e) {
                 System.out.println("Error de formato");
                 sc.nextLine();
             }
-        }return intUsuario;
+        }
+        return intUsuario;
     }
 
-    public static float leerFloat(String mensaje){
-        boolean error=false;
-        float floatUsuario =0;
+    public static float leerFloat(String mensaje) {
+        boolean error = false;
+        float floatUsuario = 0;
 
-        while(!error){
+        while (!error) {
             System.out.println(mensaje);
-            try{
+            try {
                 floatUsuario = sc.nextFloat();
-                error=true;
-                System.out.println("Has introducido: "+floatUsuario);
+                error = true;
+                System.out.println("Has introducido: " + floatUsuario);
 
             } catch (InputMismatchException e) {
                 System.out.println("Error de formato");
                 sc.nextLine();
             }
-        }return floatUsuario;
+        }
+        return floatUsuario;
     }
 
-    public static double leerDouble(String mensaje){
-        boolean error=false;
-        double doubleUsuario =0;
+    public static double leerDouble(String mensaje) {
+        boolean error = false;
+        double doubleUsuario = 0;
 
-        while(!error){
+        while (!error) {
             System.out.println(mensaje);
-            try{
+            try {
                 doubleUsuario = sc.nextDouble();
-                error=true;
-                System.out.println("Has introducido: "+doubleUsuario);
+                error = true;
+                System.out.println("Has introducido: " + doubleUsuario);
 
             } catch (InputMismatchException e) {
                 System.out.println("Error de formato");
                 sc.nextLine();
             }
-        }return doubleUsuario;
+        }
+        return doubleUsuario;
     }
 
-    public static char leerChar(String mensaje){
+    public static char leerChar(String mensaje) {
 
-        while(true){
+        while (true) {
             System.out.println(mensaje);
-            try{
+            try {
                 String charUsuario = sc.next();
-                System.out.println("Has introducido: "+charUsuario);
-                if (charUsuario.length()>1){
+                System.out.println("Has introducido: " + charUsuario);
+                if (charUsuario.length() > 1) {
                     throw new personalizedException("Debes introducir un solo carácter");
                 }
                 return charUsuario.charAt(0);
@@ -98,13 +102,13 @@ public class Entry {
         }
     }
 
-    public static String leerString(String mensaje){
-        while(true){
+    public static String leerString(String mensaje) {
+        while (true) {
             System.out.println(mensaje);
-            try{
+            try {
                 String stringUsuario = sc.nextLine();
-                System.out.println("Has introducido: "+stringUsuario);
-                if (stringUsuario.isBlank()){
+                System.out.println("Has introducido: " + stringUsuario);
+                if (stringUsuario.isBlank()) {
                     throw new personalizedException("debes introducir una linea de texto que no esté vacía");
                 }
 
@@ -116,26 +120,29 @@ public class Entry {
         }
     }
 
-    public static boolean leerSiNo(String mensaje){
-        boolean SN = false;
-        while(true){
+    public static boolean leerSiNo(String mensaje) {
+        while (true) {
             System.out.println(mensaje);
-            try{
+            try {
                 String charUsuario = sc.nextLine();
                 String normalizado = charUsuario.toUpperCase();
-                System.out.println("Has introducido: "+charUsuario);
-                if (charUsuario.length() !=1){
+                System.out.println("Has introducido: " + charUsuario);
+
+                if (!normalizado.equals("S") && !normalizado.equals("N")) {
                     throw new personalizedException("Debes introducir un solo carácter: S/N");
                 }
-                switch (normalizado){
-                    case "S"->{SN= true; System.out.println("Felicitaciones, te gusta programar!!");}
-                    case "N"->{SN=false;System.out.println("Lo sentimos mucho!");}
-                    default->{throw new personalizedException("Solo puedes introducir la letra S o N");}
+
+                switch (normalizado) {
+                    case "S" -> {
+                        return true;
+                    }
+                    case "N" -> {
+                        return false;
+                    }
                 }
-                return SN;
             } catch (personalizedException e) {
                 System.out.println(e.getMessage());
-                sc.nextLine();
+
             }
         }
 

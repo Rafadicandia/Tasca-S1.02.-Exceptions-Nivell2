@@ -13,13 +13,14 @@ public class main {
 
         Entry entrada1 = new Entry();
 
-       entrada1.leerByte("Introduce tu edad");
-       entrada1.leerInt("Introduce tu año de nacimiento");
-       entrada1.leerFloat("Introduce un número con coma");
-       entrada1.leerDouble("Introduce un número con coma");
-       entrada1.leerChar("Introduce un único carácter");
-       entrada1.leerString("Introduce una palabra");
-       entrada1.leerSiNo("Te gusta programar? Responde s: sí o n: no");
+       //entrada1.leerByte("Introduce tu edad");
+       //entrada1.leerInt("Introduce tu año de nacimiento");
+       //entrada1.leerFloat("Introduce un número con coma");
+      // entrada1.leerDouble("Introduce un número con coma");
+       //entrada1.leerChar("Introduce un único carácter");
+       //entrada1.leerString("Introduce una palabra");
+       if (entrada1.leerSiNo("Te gusta los parsteles? Responde s: sí o n: no")) System.out.println("ok te mola");
+
 
 
 

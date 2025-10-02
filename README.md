@@ -1,76 +1,86 @@
-<br>
 
-## 📄Descripció - Enunciat de l'exercici
 
-### Exercici 1
+## 📄Description - Exercise Statement
 
-Crea una classe anomenada "Entrada". Aquesta classe ha de servir per controlar les diferents excepcions que poden aparèixer en Java a l’hora d’introduir dades per teclat utilitzant la classe Scanner.
+### Exercise 1
 
-El primer que s’ha de fer és instanciar un objecte de la classe Scanner i a partir d’aquí, crear mètodes estàtics per llegir els diferents tipus de dades des del teclat.
+Create a class named "**Entrada**" (Input). This class should be used to control the different exceptions that may appear in Java when introducing data via the keyboard using the **Scanner** class.
 
-Important
+The first step is to instantiate an object of the **Scanner** class, and then create **static methods** to read the different data types from the keyboard.
 
-És important que si en algun mètode salta una excepció, la tractem i tornem a demanar la dada a l’usuari/ària fins que aquesta estigui ben introduïda. Per exemple: Si introdueix un float amb un punt en lloc d'una coma, ha de mostrar “Error de format”. Fins que l’usuari/ària no introdueix un float ben format ha de seguir demanant la dada.
+**Important**
 
-Tots els mètodes reben un String amb el missatge que es vol mostrar a l’usuari/ària, per exemple: “Introdueix la teva edat”, i retornen la dada oportuna introduïda per l’usuari/ària en cada mètode, per exemple: un byte amb l’edat de l’usuari/ària.
+It is important that if an exception occurs in any method, we **handle it** and ask the user for the data again until it has been correctly entered. For example: If the user enters a `float` with a period instead of a comma, it must display "**Error de format**" (Format Error). The method must continue asking for the data until the user enters a correctly formatted `float`.
 
-Mètodes a implantar capturant l’excepció de la classe "InputMismatchException":
+All methods receive a **String** with the message to be displayed to the user, for example: "Introdueix la teva edat" (Enter your age), and return the appropriate data entered by the user in each method, for example: a `byte` with the user's age.
 
+Methods to implement, capturing the exception of the class "**InputMismatchException**":
+
+```java
 public static byte llegirByte(String missatge);
-
 public static int llegirInt(String missatge);
-
 public static float llegirFloat(String missatge);
-
 public static double llegirDouble(String missatge);
+```
 
-Mètodes a implantar capturant una excepció personalitzada de la classe Exception:
+Methods to implement, capturing a **custom exception** of the class **Exception**:
 
+```java
 public static char llegirChar(String missatge);
-
 public static String llegirString(String missatge);
+public static boolean llegirSiNo(String missatge), // if the user enters "s", it returns "true", if the user enters "n", it returns "false".
+```
 
-public static boolean llegirSiNo(String missatge), si l’usuari/ària introdueix “s”, retorna “true”, si l’usuari/ària introdueix “n”, retorna “false”.
+-----
 
-## 💻Tecnologies Utilitzades
+## 💻Used Technologies
 
 **Java**: 24 (OpenJDK)
 
-## 📋Requisits
+-----
 
-- Sistema Operativo: Windows/macOS/Linux.
+## 📋Requirements
 
-- **Java Development Kit (JDK):** Versió 24.0.1 (o superior). Es recomana utilitzar una distribució d'**OpenJDK**.
+- Operating System: Windows/macOS/Linux.
 
-- Ejemplo: JDK 21 o superior.
+- **Java Development Kit (JDK):** Version 24.0.1 (or higher). It is recommended to use an **OpenJDK** distribution.
 
-- Entorno de Desarrollo Integrado (IDE): IntelliJ IDEA.
+- Example: JDK 21 or higher.
+
+- Integrated Development Environment (IDE): IntelliJ IDEA.
+
+-----
+
+## 🛠️Installation
+
+- Clone the Repository:
 
 
-## 🛠️Instal·lació
-
-- Clonar el Repositorio:
-
+```bash
 git clone https://github.com/Rafadicandia/Tasca-S1.02.-Exceptions-Nivell2.git
+```
 
-- Configuración del IDE:
+- IDE Configuration:
 
-Abrir el fichero como un proyecto de Java.
+Open the file as a Java project.
 
+-----
 
-## ▶️Execució
+## ▶️Execution
 
-- Ejecutar desde el IDE
-    - Abrir el archivo principal (el que contiene el método main).
+- Execute from the IDE
+  - Open the main file (the one containing the `main` method).
 
-    - Hacer clic derecho y seleccionar "Run 'Main'".
+  - Right-click and select "Run 'Main'".
 
+-----
 
-## 🌐Desplegament
+## 🌐Deployment
 
-Instruccions per al desplegament del projecte en un entorn de producció o servidor.
+Instructions for deploying the project in a production environment or server.
 
+-----
 
-## 🤝Contribucions
+## 🤝Contributions
 
-### Las contribuciones son bienvenidas. Por favor, reporta cualquier error abriendo un issue o sugiere mejoras mediante un Pull Request claro y conciso.
+### Contributions are welcome. Please report any bugs by opening an issue or suggest improvements via a clear and concise Pull Request.
