@@ -75,12 +75,6 @@ Open the file as a Java project.
 
 -----
 
-## 🌐Deployment
-
-Instructions for deploying the project in a production environment or server.
-
------
-
 ## 🤝Contributions
 
 ### Contributions are welcome. Please report any bugs by opening an issue or suggest improvements via a clear and concise Pull Request.
