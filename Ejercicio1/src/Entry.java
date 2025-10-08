@@ -122,7 +122,7 @@ public class Entry {
             System.out.println(mensaje);
             try {
                 String charUsuario = sc.nextLine();
-                String normalizado = charUsuario.toUpperCase();
+                String normalizado = charUsuario.toUpperCase().trim();
                 
 
                 if (!normalizado.equals("S") && !normalizado.equals("N")) {
