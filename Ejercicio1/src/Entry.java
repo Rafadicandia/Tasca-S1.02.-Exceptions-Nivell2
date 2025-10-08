@@ -5,7 +5,7 @@ public class Entry {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static byte leerByte(String mensaje) {
+    public static byte readByte(String mensaje) {
         boolean error = false;
         byte byteUsuario = 0;
 
@@ -25,7 +25,7 @@ public class Entry {
 
     }
 
-    public static int leerInt(String mensaje) {
+    public static int readInt(String mensaje) {
         boolean error = false;
         int intUsuario = 0;
 
@@ -43,7 +43,7 @@ public class Entry {
         return intUsuario;
     }
 
-    public static float leerFloat(String mensaje) {
+    public static float readFloat(String mensaje) {
         boolean error = false;
         float floatUsuario = 0;
 
@@ -62,7 +62,7 @@ public class Entry {
         return floatUsuario;
     }
 
-    public static double leerDouble(String mensaje) {
+    public static double readDouble(String mensaje) {
         boolean error = false;
         double doubleUsuario = 0;
 
@@ -81,7 +81,7 @@ public class Entry {
         return doubleUsuario;
     }
 
-    public static char leerChar(String mensaje) {
+    public static char readChar(String mensaje) {
 
         while (true) {
             System.out.println(mensaje);
@@ -99,7 +99,7 @@ public class Entry {
         }
     }
 
-    public static String leerString(String mensaje) {
+    public static String readString(String mensaje) {
         while (true) {
             System.out.println(mensaje);
             try {
@@ -117,13 +117,13 @@ public class Entry {
         }
     }
 
-    public static boolean leerSiNo(String mensaje) {
+    public static boolean readYesNo(String mensaje) {
         while (true) {
             System.out.println(mensaje);
             try {
                 String charUsuario = sc.nextLine();
                 String normalizado = charUsuario.toUpperCase();
-
+                
 
                 if (!normalizado.equals("S") && !normalizado.equals("N")) {
                     throw new PersonalizedException("You must type in S/N");
