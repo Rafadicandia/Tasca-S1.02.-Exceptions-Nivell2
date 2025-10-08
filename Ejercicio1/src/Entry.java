@@ -123,20 +123,15 @@ public class Entry {
             try {
                 String charUsuario = sc.nextLine();
                 String normalizado = charUsuario.toUpperCase().trim();
-                
 
-                if (!normalizado.equals("S") && !normalizado.equals("N")) {
+                if(normalizado.equals("S")){
+                    return true;
+                }else if(normalizado.equals("N")){
+                    return false;
+                }else {
                     throw new PersonalizedException("You must type in S/N");
                 }
 
-                switch (normalizado) {
-                    case "S" -> {
-                        return true;
-                    }
-                    case "N" -> {
-                        return false;
-                    }
-                }
             } catch (PersonalizedException e) {
                 System.out.println(e.getMessage());
 
