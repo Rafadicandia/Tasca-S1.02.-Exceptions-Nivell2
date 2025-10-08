@@ -91,10 +91,10 @@ public class Entry {
                 String charUsuario = sc.next();
                 System.out.println("Has introducido: " + charUsuario);
                 if (charUsuario.length() > 1) {
-                    throw new personalizedException("Debes introducir un solo carácter");
+                    throw new PersonalizedException("Debes introducir un solo carácter");
                 }
                 return charUsuario.charAt(0);
-            } catch (personalizedException e) {
+            } catch (PersonalizedException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
             }
@@ -108,11 +108,11 @@ public class Entry {
                 String stringUsuario = sc.nextLine();
                 System.out.println("Has introducido: " + stringUsuario);
                 if (stringUsuario.isBlank()) {
-                    throw new personalizedException("debes introducir una linea de texto que no esté vacía");
+                    throw new PersonalizedException("debes introducir una linea de texto que no esté vacía");
                 }
 
                 return stringUsuario;
-            } catch (personalizedException e) {
+            } catch (PersonalizedException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
             }
@@ -128,7 +128,7 @@ public class Entry {
                 System.out.println("Has introducido: " + charUsuario);
 
                 if (!normalizado.equals("S") && !normalizado.equals("N")) {
-                    throw new personalizedException("Debes introducir un solo carácter: S/N");
+                    throw new PersonalizedException("Debes introducir un solo carácter: S/N");
                 }
 
                 switch (normalizado) {
@@ -139,7 +139,7 @@ public class Entry {
                         return false;
                     }
                 }
-            } catch (personalizedException e) {
+            } catch (PersonalizedException e) {
                 System.out.println(e.getMessage());
 
             }
