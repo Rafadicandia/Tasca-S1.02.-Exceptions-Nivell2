@@ -53,7 +53,6 @@ public class Entry {
                 floatUsuario = sc.nextFloat();
                 error = true;
 
-
             } catch (InputMismatchException e) {
                 System.out.println("Format error");
                 sc.nextLine();
@@ -103,8 +102,7 @@ public class Entry {
         while (true) {
             System.out.println(mensaje);
             try {
-                String stringUsuario = sc.nextLine();
-
+                String stringUsuario = sc.next();
                 if (stringUsuario.isBlank()) {
                     throw new PersonalizedException("You can't type in blank");
                 }
