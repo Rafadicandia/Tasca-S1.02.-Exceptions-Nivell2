@@ -2,13 +2,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Entry.readByte("Introduce tu edad");
-        Entry.readInt("Introduce tu año de nacimiento");
-        Entry.readFloat("Introduce un número con coma");
-        Entry.readDouble("Introduce un número con coma");
-        Entry.readChar("Introduce un único carácter");
-        Entry.readString("Introduce una palabra");
-        if (Entry.readYesNo("Te gusta los parsteles? Responde s: sí o n: no")) System.out.println("ok te mola");
+        Entry.readByte("How old are you?");
+        Entry.readInt("Which year where you born?");
+        Entry.readFloat("Type in a number with comma");
+        Entry.readDouble("Type in a number with comma");
+        Entry.readChar("Type in a single character");
+        Entry.readString("Type in a word");
+        Entry.readYesNo("Do you like cake? Answer Y: yes or N: no");
 
 
     }
