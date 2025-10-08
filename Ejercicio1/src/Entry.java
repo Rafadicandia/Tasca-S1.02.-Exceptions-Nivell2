@@ -124,12 +124,12 @@ public class Entry {
                 String charUsuario = sc.nextLine();
                 String normalizado = charUsuario.toUpperCase().trim();
 
-                if(normalizado.equals("S")){
+                if(normalizado.equals("Y")){
                     return true;
                 }else if(normalizado.equals("N")){
                     return false;
                 }else {
-                    throw new PersonalizedException("You must type in S/N");
+                    throw new PersonalizedException("You must type in Y/N");
                 }
 
             } catch (PersonalizedException e) {
