@@ -14,10 +14,9 @@ public class Entry {
             try {
                 byteUsuario = sc.nextByte();
                 error = true;
-                System.out.println("Has introducido: " + byteUsuario);
 
             } catch (InputMismatchException e) {
-                System.out.println("Error de formato");
+                System.out.println("Format error");
                 sc.nextLine();
             }
         }
@@ -35,10 +34,9 @@ public class Entry {
             try {
                 intUsuario = sc.nextInt();
                 error = true;
-                System.out.println("Has introducido: " + intUsuario);
 
             } catch (InputMismatchException e) {
-                System.out.println("Error de formato");
+                System.out.println("Format error");
                 sc.nextLine();
             }
         }
@@ -54,10 +52,10 @@ public class Entry {
             try {
                 floatUsuario = sc.nextFloat();
                 error = true;
-                System.out.println("Has introducido: " + floatUsuario);
+
 
             } catch (InputMismatchException e) {
-                System.out.println("Error de formato");
+                System.out.println("Format error");
                 sc.nextLine();
             }
         }
@@ -73,10 +71,10 @@ public class Entry {
             try {
                 doubleUsuario = sc.nextDouble();
                 error = true;
-                System.out.println("Has introducido: " + doubleUsuario);
+
 
             } catch (InputMismatchException e) {
-                System.out.println("Error de formato");
+                System.out.println("Format error");
                 sc.nextLine();
             }
         }
@@ -89,9 +87,9 @@ public class Entry {
             System.out.println(mensaje);
             try {
                 String charUsuario = sc.next();
-                System.out.println("Has introducido: " + charUsuario);
+
                 if (charUsuario.length() > 1) {
-                    throw new PersonalizedException("Debes introducir un solo carácter");
+                    throw new PersonalizedException("You must type one character");
                 }
                 return charUsuario.charAt(0);
             } catch (PersonalizedException e) {
@@ -106,9 +104,9 @@ public class Entry {
             System.out.println(mensaje);
             try {
                 String stringUsuario = sc.nextLine();
-                System.out.println("Has introducido: " + stringUsuario);
+
                 if (stringUsuario.isBlank()) {
-                    throw new PersonalizedException("debes introducir una linea de texto que no esté vacía");
+                    throw new PersonalizedException("You can't type in blank");
                 }
 
                 return stringUsuario;
@@ -125,10 +123,10 @@ public class Entry {
             try {
                 String charUsuario = sc.nextLine();
                 String normalizado = charUsuario.toUpperCase();
-                System.out.println("Has introducido: " + charUsuario);
+
 
                 if (!normalizado.equals("S") && !normalizado.equals("N")) {
-                    throw new PersonalizedException("Debes introducir un solo carácter: S/N");
+                    throw new PersonalizedException("You must type in S/N");
                 }
 
                 switch (normalizado) {
